@@ -15,7 +15,7 @@ spec:
         app: go-helloworld-2
     spec:
       containers:
-      - image: コピーしたコンテナイメージ名
+      - image: ghcr.io/2022-4400-exp/4411-go-helloworld-2:f3cbc55da11e379bbaec7f74cfc85e9cc5233984@sha256:f66019f465eb08ffedb1fc1e2da2f45f61a29a48cef22f175927bca3a7ef5ecby
         name: go-helloworld-2
 ---
 apiVersion: v1
