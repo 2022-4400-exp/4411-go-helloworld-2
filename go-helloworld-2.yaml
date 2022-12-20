@@ -15,7 +15,7 @@ spec:
         app: go-helloworld-2
     spec:
       containers:
-      - image: yanbaru/go-helloworld-2
+      - image: コピーしたコンテナイメージ名
         name: go-helloworld-2
 ---
 apiVersion: v1
