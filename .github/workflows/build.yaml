@@ -26,13 +26,11 @@ jobs:
           buildx-version: latest
           qemu-version: latest
 
-      - name: Build and Publish
+      - name: Build Docker image
         run: |
-          docker buildx build \
-            --push \
-            --platform linux/arm/v7,linux/amd64 \
-            -t ghcr.io/2022-4400-exp/4411-go-helloworld-2:${{ github.sha }} .
-     
+          docker buildx build --platform linux/amd64,linux/arm/v7 . -t ghcr.io/2022-4400-exp/4411-go-helloworld-2:${{ github.sha }} --push
+
+
       - name: Update manifest image tag
         id: update-image-tag
         continue-on-error: true
